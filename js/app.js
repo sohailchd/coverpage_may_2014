@@ -1,6 +1,6 @@
 
 /*
-   Boundcing Ball animation
+   Bouncing Ball animation
 */
 
 var maxBall = 200;
@@ -267,14 +267,14 @@ function getColor()
 function redirect()
 {
 	if(DONE.I && DONE.G && DONE.B){
-	   window.location.assign("https://sohailchd.github.io/index_b.html");
+	   window.location.assign("https://sohailchd.github.io");
     }
 }
 
 function mainLoop(){
       gameInit();
       
-      setInterval(update,1000/60);
+      setInterval(update,1000/40);
       //window.requestAnimationFrame(update);
       //console.log(game.fireBallList.length);
       setInterval(redirect,1000);
@@ -305,7 +305,12 @@ function drawtext(x,y,c,txt,sz){
 }
 
 
+$( function() {
+    
+});
+
 $(function main(){
 	     mainLoop();          
-	     console.log(audio.duration);
+         console.log(audio.duration);
+         $( "#slider" ).slider();
 });
